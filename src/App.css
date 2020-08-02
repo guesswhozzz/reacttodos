@@ -30,7 +30,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 10px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -74,13 +74,122 @@ h6 {
 }
 /**/
 
-.app_wrapper_content {
-  grid-area: c;
+.fa-test::after {
+  padding: 10px;
+  content: "OK";
 }
-.app_wrapper_navbar {
-  grid-area: n;
-  position: fixed;
+
+.app_wrapper {
+  background-color: rgb(223, 223, 223);
+  position: relative;
 }
-* {
-  font-size: 18pt;
+
+.app-header__title {
+  font-size: 2.8rem;
+}
+.app-header__button {
+  min-width: 8rem;
+  min-height: 3rem;
+  background-color: transparent;
+  border: 1px solid #62a60a;
+  border-radius: 0.4rem;
+  transition: 0.1s all;
+}
+.app-header__button:hover {
+  color: #ffffff;
+  background-color: #62a60a;
+}
+
+.app-footer {
+  background-color: black;
+  color: #ffffff;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+/* MODAL WINDOW */
+.modal-window-background {
+  position: absolute;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-window-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.modal-window-wrapper {
+  position: absolute;
+  min-width: 460px;
+  min-height: 150px;
+  padding: 1.5rem;
+  top: 50%;
+  left: 30%;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18), 0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    0 2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modal-window-titel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+
+.modal-window__text {
+  font-size: 1.4rem;
+  color: #808080;
+}
+
+.modal-window__btn {
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  padding: 10px;
+  transition: 0.2s all;
+}
+.modal-window__btn-icon {
+  height: 16px;
+  width: 16px;
+  color: red;
+  transition: 0.2s all;
+}
+.modal-window__btn:hover {
+  background-color: red;
+}
+.modal-window__btn:hover .modal-window__btn-icon {
+  color: white;
+}
+
+.modal-window__ipt {
+  width: 270px;
+  line-height: 30px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin-bottom: 26px;
+}
+.modal-window__create {
+  min-width: 8rem;
+  min-height: 3rem;
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+  border-radius: 0.4rem;
+  transition: 0.1s all;
+  align-self: flex-start;
+  transition: 0.2s all;
+  margin-bottom: 11px;
+}
+.modal-window__create:hover {
+  background-color: #0071bc;
+  color: white;
+}
+
+/* TODO ITEMS LIST */
+.task-list-container__text {
+  background-color: tomato;
+  flex: 1;
 }
